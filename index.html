@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="./script.js" defer></script>
+
+  <title>Frontend Mentor | Interactive rating component</title>
+
+ 
+  <style>
+    
+  </style>
+</head>
+<body>
+
+  <!-- Rating state start -->
+<main>
+
+  <section id="Submission-Section">
+
+    <div class="star_img_container">
+      <img src="images/icon-star.svg" alt="star_image" >
+    </div>
+
+   <h1> How did we do?</h1>
+<p >
+  Please let us know how we did with your support request. All feedback is appreciated 
+  to help us improve our offering!
+</p>
+
+<ul class="Review_rating_list">
+
+  <li  class="one" onclick="review_choice(one)">1</li>
+  <li  class="two"  onclick="review_choice(two)">2</li>
+  <li  class="three" onclick="review_choice(three)">3</li>
+  <li  class="four" onclick="review_choice(four)">4</li>
+  <li  class="five" onclick="review_choice(five)">5</li>
+
+</ul>
+
+  <button id="submit">Submit</button> 
+
+ 
+</section>
+
+
+
+<section id="Result-Section">
+  <img class="thank_you_img"src="images/illustration-thank-you.svg" alt="Thank_you.png" >
+  <p class="result_container">You selected <span id="result"></span> out of 5</p>
+
+  <h2>Thank you!</h2>
+
+ <p class="appreciation_sentence">We appreciate you taking the time to give a rating. If you ever need more support, 
+  don't hesitate to get in touch!</p> 
+</section>
+ 
+
+</main>
+<footer class="attribution">
+
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/Artosh-afr" target="_blank">Berie</a>.
+ 
+</footer>
+
+</body>
+</html>
