@@ -98,7 +98,7 @@ body{
                 cursor: pointer;
         }
                 .Review_rating_list > li:hover{
-                    background-color:var(--Orange) ;
+                    background-color:var(--Light_Grey) ;
                     color: var(--White);
                 }
 
