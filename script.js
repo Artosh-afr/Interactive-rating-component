@@ -15,7 +15,7 @@ var FinalAns="";
 function review_choice(UserChoice){
     for(let i=0;i<5;i++){
     if(UserChoice.innerHTML==entireList[i].innerHTML){
-        UserChoice.style.backgroundColor = 'var(--Medium_Grey)';
+        UserChoice.style.backgroundColor = 'var(--Orange)';
         UserChoice.style.color="white";
         UserChoice.onmouseover=null;
         UserChoice.onmouseout=null;
@@ -24,7 +24,7 @@ function review_choice(UserChoice){
         entireList[i].style.color="var(--Medium_Grey)";
 
         entireList[i].onmouseover=function(){
-            entireList[i].style.backgroundColor="var(--Orange)";
+            entireList[i].style.backgroundColor="var(--Light_Grey)";
             entireList[i].style.color="white";
         };
 
