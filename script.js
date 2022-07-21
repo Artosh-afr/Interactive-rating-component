@@ -3,7 +3,10 @@
 document.querySelectorAll(".review-nr").forEach((item,index,array)=>{
     item.addEventListener("click",()=>{
       for(let i=0;i<array.length;i++){
-        document.querySelectorAll(".review-nr")[i].classList.remove("active-rating");
+        if(i!=index){
+            document.querySelectorAll(".review-nr")[i].classList.remove("active-rating");
+        }
+       
       }
       item.classList.toggle("active-rating");
     })
