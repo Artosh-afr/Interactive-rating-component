@@ -97,6 +97,11 @@ body{
                 -o-border-radius:50%;
                 cursor: pointer;
         }
+
+        .active-rating{
+            background-color: var(--Orange) !important;
+            color: white !important;
+        }
                 .Review_rating_list > li:hover{
                     background-color:var(--Light_Grey) ;
                     color: var(--White);
@@ -188,6 +193,8 @@ footer{
        color:red;
    }
     
+
+
 
 @media(max-width:500px){
    

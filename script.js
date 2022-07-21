@@ -1,51 +1,25 @@
-function qs(selector){
-    return document.querySelector(selector);
-}
-//entire list
-var one=qs(".one");
-var two=qs(".two");
-var three=qs(".three");
-var four=qs(".four");
-var five=qs(".five");
 
-var entireList =document.querySelectorAll("li");
 
-var FinalAns="";
-//review rating
-function review_choice(UserChoice){
-    for(let i=0;i<5;i++){
-    if(UserChoice.innerHTML==entireList[i].innerHTML){
-        UserChoice.style.backgroundColor = 'var(--Orange)';
-        UserChoice.style.color="white";
-        UserChoice.onmouseover=null;
-        UserChoice.onmouseout=null;
-    }else{
-        entireList[i].style.backgroundColor="var(--Dark_Blue)";
-        entireList[i].style.color="var(--Medium_Grey)";
+document.querySelectorAll(".review-nr").forEach((item,index,array)=>{
+    item.addEventListener("click",()=>{
+      for(let i=0;i<array.length;i++){
+        document.querySelectorAll(".review-nr")[i].classList.remove("active-rating");
+      }
+      item.classList.toggle("active-rating");
+    })
+})
 
-        entireList[i].onmouseover=function(){
-            entireList[i].style.backgroundColor="var(--Light_Grey)";
-            entireList[i].style.color="white";
-        };
-
-        entireList[i].onmouseout=function(){
-            entireList[i].style.backgroundColor="var(--Dark_Blue)";
-            entireList[i].style.color="var(--Medium_Grey)";
-            };
-        }
+document.querySelector("#submit").addEventListener("click",()=>{
+    try{
+        let rating=document.querySelector(".active-rating").innerHTML;
+       
+            document.querySelector("#Submission-Section").style.display="none";
+            document.querySelector("#Result-Section").style.display="block";
+            document.querySelector("#result").innerHTML=rating;  
     }
-    FinalAns=UserChoice.innerHTML;
-}
-//Result
-
-
-document.querySelector("#submit").onclick=function(){
-    if(FinalAns==""){
-        window.alert("Please choose a rating.")
-    }else{
-        document.querySelector("#Submission-Section").style.display="none";
-        document.querySelector("#Result-Section").style.display="block";
-        document.querySelector("#result").innerHTML=FinalAns;
-
+    catch(ex){
+        alert("Please choose a rating")
     }
-}
+   
+   
+})
