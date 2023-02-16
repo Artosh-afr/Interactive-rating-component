@@ -1,16 +1,16 @@
+let ratings=document.querySelectorAll(".review-nr");
 
-
-document.querySelectorAll(".review-nr").forEach((item,index,array)=>{
-    item.addEventListener("click",()=>{
-      for(let i=0;i<array.length;i++){
-        if(i!=index){
-            document.querySelectorAll(".review-nr")[i].classList.remove("active-rating");
-        }
-       
-      }
-      item.classList.toggle("active-rating");
+ratings.forEach(((rating,index)=>{
+    rating.ratingID=index;
+    rating.addEventListener("click",rate)
+}))
+function rate(e){
+    e.target.classList.toggle("active-rating");
+    ratings.forEach((rating,index)=>{
+        e.target.ratingID!==index && rating.classList.remove("active-rating")
     })
-})
+}
+
 
 document.querySelector("#submit").addEventListener("click",()=>{
     try{
